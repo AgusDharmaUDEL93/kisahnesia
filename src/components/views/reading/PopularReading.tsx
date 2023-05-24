@@ -1,4 +1,5 @@
 import CardStory from "@/components/widgets/cardStory/CardStory";
+import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
 import {
   Box,
   Heading,
@@ -34,20 +35,7 @@ export default function PopularReading() {
         </SimpleGrid>
       </Stack>
       <Center height={"12rem"}>
-        <Button
-          variant={"unstyled"}
-          bgColor={"primary"}
-          px={"2.5rem"}
-          height={"3rem"}
-          fontFamily={"Lato"}
-          textColor={"white"}
-          borderRadius={"20rem"}
-          _hover={{
-            filter: "brightness(80%)",
-          }}
-        >
-          Lihat Lainnya
-        </Button>
+        <ThemeButton>Lihat Lainnya</ThemeButton>
       </Center>
     </Box>
   );

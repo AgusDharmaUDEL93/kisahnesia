@@ -51,7 +51,7 @@ export default function Navbar() {
     <Box as={"nav"}>
       <Box
         px={{ base: 4, md: "10%" }}
-        py={"1.5rem"}
+        py={"0.8rem"}
         position={"fixed"}
         width={"100%"}
         zIndex={"2"}
@@ -66,7 +66,7 @@ export default function Navbar() {
             _hover={{ filter: "brightness(90%)" }}
             onClick={() => navigate(router, "/")}
           >
-            <Heading fontWeight={"black"} fontSize={24}>
+            <Heading fontWeight={"black"} fontSize={20}>
               Kisahnesia
             </Heading>
           </Button>
@@ -115,7 +115,7 @@ export default function Navbar() {
               borderColor={"black"}
               borderRadius={"3rem"}
               px={"1.5rem"}
-              fontSize={16}
+              fontSize={12}
               fontFamily={"Lato"}
               onClick={() => {
                 navigate(router, "/");

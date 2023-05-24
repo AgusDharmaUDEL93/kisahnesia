@@ -17,6 +17,7 @@ export default function Navitem({ children, path }: props) {
       variant={"nav"}
       fontWeight={isSelected ? "bold" : "regular"}
       transition={"color 0.5s"}
+      fontSize={12}
       onClick={() => navigate(router, path)}
       color={isSelected ? "primary" : "secondary"}
       _hover={{
