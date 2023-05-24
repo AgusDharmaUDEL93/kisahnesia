@@ -1,12 +1,12 @@
 import Layouts from "@/layouts/Layouts";
 import { Box, Center, Heading } from "@chakra-ui/react";
 
-export default function Home() {
+export default function List() {
   return (
-    <Layouts title="Kisahnesia | Cerita Rakyat Indonesia" >
+    <Layouts title="Daftar Cerita | Kisahnesia">
       <Box>
         <Center height={"100vh"}>
-          <Heading>Teknisi Galau</Heading>
+          <Heading>List Page</Heading>
         </Center>
       </Box>
     </Layouts>
