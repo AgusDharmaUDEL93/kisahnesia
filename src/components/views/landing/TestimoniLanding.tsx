@@ -1,10 +1,16 @@
+import { bottom, left, right, top } from "@/animations/linear";
 import { Box, Stack, Text, Image, Heading } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function TestimoniLanding() {
   return (
     <Box py={"10rem"}>
       <Stack spacing={"2.5rem"} align={"center"} fontFamily={"Lato"}>
         <Text
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
           fontSize={"12px"}
           fontFamily={"Asap"}
           color={"textBody"}
@@ -13,6 +19,10 @@ export default function TestimoniLanding() {
           Reliabilitas
         </Text>
         <Heading
+          as={motion.div}
+          variants={bottom}
+          initial="init"
+          whileInView="animate"
           color={"textHeading"}
           fontWeight={"bold"}
           fontSize={"36px"}
@@ -21,6 +31,10 @@ export default function TestimoniLanding() {
           Testimonial
         </Heading>
         <Text
+          as={motion.div}
+          variants={right}
+          initial="init"
+          whileInView="animate"
           fontSize={"12px"}
           fontFamily={"Asap"}
           color={"textBody"}
@@ -39,12 +53,21 @@ export default function TestimoniLanding() {
           color={"textHeading"}
           maxW={"800px"}
           textAlign={"center"}
+          as={motion.div}
+          variants={bottom}
+          initial="init"
+          whileInView="animate"
         >
           “Saya awalnya tidak percaya. Namun, tim Kisahnesia berhasil
           mengumpulkan begitu banyak cerita yang menakjubkan. Saya harap hal ini
           bisa melestarikan budaya kita“
         </Text>
-        <Stack>
+        <Stack
+          as={motion.div}
+          variants={top}
+          initial="init"
+          whileInView="animate"
+        >
           <Text
             fontSize={"16px"}
             fontFamily={"Lato"}

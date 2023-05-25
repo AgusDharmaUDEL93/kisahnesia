@@ -6,7 +6,7 @@ import TestimoniLanding from "@/components/views/landing/TestimoniLanding";
 import Layouts from "@/layouts/Layouts";
 import { Box, Center, Heading } from "@chakra-ui/react";
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <Layouts title="Kisahnesia | Cerita Rakyat Indonesia">
       <HeroLanding />

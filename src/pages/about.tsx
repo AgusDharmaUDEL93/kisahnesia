@@ -1,7 +1,7 @@
 import Layouts from "@/layouts/Layouts";
 import { Box, Center, Heading } from "@chakra-ui/react";
 
-export default function List() {
+export default function About() {
   return (
     <Layouts title="Tentang Kami | Kisahnesia">
       <Box>

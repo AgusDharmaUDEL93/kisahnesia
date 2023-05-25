@@ -1,5 +1,7 @@
+import { left } from "@/animations/linear";
 import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
 import { Box, Flex, Heading, Stack, Text, Image } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,7 +10,13 @@ export default function SliderLanding() {
   return (
     <>
       <Box px={{ base: 4, md: "10%" }} py={"0.8rem"}>
-        <Stack color={"textBody"}>
+        <Stack
+          color={"textBody"}
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+        >
           <Text fontFamily={"Asap"} fontSize={"12px"}>
             Daftar Cerita
           </Text>

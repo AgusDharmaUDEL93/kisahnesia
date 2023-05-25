@@ -1,3 +1,4 @@
+import { bottom, left, right, top } from "@/animations/linear";
 import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
 import {
   Box,
@@ -10,18 +11,41 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function GenreLanding() {
   return (
     <Box px={{ base: 4, md: "10%" }}>
       <Stack align={"center"} spacing={"1rem"} color={"textBody"} py={"3rem"}>
-        <Text fontFamily={"Asap"} fontSize={"12px"}>
+        <Text
+          fontFamily={"Asap"}
+          fontSize={"12px"}
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+        >
           Daftar Cerita
         </Text>
-        <Heading fontFamily={"Lato"} color={"textHeading"} fontSize={"36px"}>
+        <Heading
+          fontFamily={"Lato"}
+          color={"textHeading"}
+          fontSize={"36px"}
+          as={motion.div}
+          variants={top}
+          initial="init"
+          whileInView="animate"
+        >
           Dari Semua Genre
         </Heading>
-        <Text fontFamily={"Asap"} fontSize={"12px"}>
+        <Text
+          fontFamily={"Asap"}
+          fontSize={"12px"}
+          as={motion.div}
+          variants={right}
+          initial="init"
+          whileInView="animate"
+        >
           Kami menyediakan bergam cerita dari beragam genre yang ada dan berasal
           dari seluruh wilayah Indonesia.
         </Text>
@@ -33,7 +57,14 @@ export default function GenreLanding() {
         templateColumns="repeat(2, 1fr)"
         color={"white"}
       >
-        <GridItem display={"flex"} rowSpan={2}>
+        <GridItem
+          display={"flex"}
+          rowSpan={2}
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+        >
           <Stack
             justify={"end"}
             borderRadius={20}
@@ -51,7 +82,13 @@ export default function GenreLanding() {
             </Text>
           </Stack>
         </GridItem>
-        <GridItem display={"flex"}>
+        <GridItem
+          display={"flex"}
+          as={motion.div}
+          variants={right}
+          initial="init"
+          whileInView="animate"
+        >
           <Stack
             justify={"end"}
             borderRadius={20}
@@ -69,7 +106,13 @@ export default function GenreLanding() {
             </Text>
           </Stack>
         </GridItem>
-        <GridItem display={"flex"}>
+        <GridItem
+          display={"flex"}
+          as={motion.div}
+          variants={right}
+          initial="init"
+          whileInView="animate"
+        >
           <Stack
             justify={"end"}
             borderRadius={20}

@@ -1,4 +1,5 @@
 import { Button } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { MouseEventHandler, ReactNode } from "react";
 
 type props = {

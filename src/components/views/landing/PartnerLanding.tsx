@@ -1,9 +1,15 @@
+import { bottom } from "@/animations/linear";
 import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function PartnerLanding() {
   return (
     <Box px={{ base: 4, md: "10%" }} paddingBottom={"10rem"}>
       <Box
+        as={motion.div}
+        variants={bottom}
+        initial="init"
+        whileInView="animate"
         width={"full"}
         bgColor={"primary"}
         px={"2rem"}

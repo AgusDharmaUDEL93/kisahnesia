@@ -13,8 +13,24 @@ export const bottom = {
       },
     },
   };
+
+export const top = {
+    init: {
+      opacity: 0,
+      y: "-25px",
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 1,
+      },
+    },
+  };
   
-  export const left = {
+export const left = {
     init: {
       opacity: 0,
       x: "-25px",
@@ -29,6 +45,7 @@ export const bottom = {
       },
     },
   };
+
   export const right = {
     init: {
       opacity: 0,

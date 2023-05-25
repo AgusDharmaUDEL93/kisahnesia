@@ -5,7 +5,7 @@ import Head from "next/head";
 const Navbar = dynamic(() => import("../components/widgets/navbar/Navbar"));
 
 type props = {
-  title: string;
+  title?: string;
   children: React.ReactNode;
 };
 

@@ -1,3 +1,4 @@
+import { left } from "@/animations/linear";
 import CardStory from "@/components/widgets/cardStory/CardStory";
 import {
   Box,
@@ -8,16 +9,37 @@ import {
   Button,
   Center,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function OtherReading() {
   return (
     <Box px={{ base: 4, md: "10%" }} py={"1.5rem"}>
       <Stack color={"textBody"} spacing={"1.5rem"}>
-        <Text>Mulai Membaca</Text>
-        <Heading fontFamily={"Lato"} color={"textHeading"}>
+        <Text
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+        >
+          Mulai Membaca
+        </Text>
+        <Heading
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+          fontFamily={"Lato"}
+          color={"textHeading"}
+        >
           Cerita Lainnya
         </Heading>
-        <Text maxW={"35rem"}>
+        <Text
+          maxW={"35rem"}
+          as={motion.div}
+          variants={left}
+          initial="init"
+          whileInView="animate"
+        >
           Tim kami telah mengumpulkan lebih dari ribuan cerita yang berasal dari
           Nusantara. Tentunya semua itu dapat dibaca secara gratis!
         </Text>
