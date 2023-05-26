@@ -26,7 +26,7 @@ export default function HeroLanding() {
       height={"100vh"}
       fontFamily={"Lato"}
       color={"#516371"}
-      bgImage={`/assets/img/bg/landingBg.png`}
+      bgImage={`/assets/img/bg/landingBg.webp`}
       bgPosition={"center"}
       bgSize={"cover"}
     >
