@@ -1,5 +1,6 @@
 import { left } from "@/animations/linear";
 import CardStory from "@/components/widgets/cardStory/CardStory";
+import navigate from "@/utils/navigate";
 import {
   Box,
   Heading,
@@ -10,8 +11,11 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import Other from "../../../data/static/story/list.json";
 
 export default function OtherReading() {
+  const router = useRouter();
   return (
     <Box px={{ base: 4, md: "10%" }} py={"1.5rem"}>
       <Stack color={"textBody"} spacing={"1.5rem"}>
@@ -31,7 +35,7 @@ export default function OtherReading() {
           fontFamily={"Lato"}
           color={"textHeading"}
         >
-          Cerita Lainnya
+          Cerita Populer lainnya
         </Heading>
         <Text
           maxW={"35rem"}
@@ -49,18 +53,18 @@ export default function OtherReading() {
           spacing={"2rem"}
           width={"100%"}
         >
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
+          {Other.map((data, index) => {
+            return (
+              <CardStory
+                id={index + 1}
+                key={index}
+                image={data.image}
+                title={data.title}
+                region={data.region}
+                time_upload={data.time_upload}
+              />
+            );
+          })}
         </SimpleGrid>
       </Stack>
       <Center height={"12rem"}>
@@ -74,6 +78,9 @@ export default function OtherReading() {
           borderRadius={"20rem"}
           _hover={{
             filter: "brightness(80%)",
+          }}
+          onClick={() => {
+            navigate(router, "/list");
           }}
         >
           Lihat Lainnya

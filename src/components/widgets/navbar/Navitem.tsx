@@ -9,16 +9,17 @@ type props = {
 
 export default function Navitem({ children, path }: props) {
   const router = useRouter();
+  const isSelected = router.asPath == path;
 
   return (
     <Button
       fontFamily={"Lato"}
       variant={"nav"}
-      fontWeight={"regular"}
+      fontWeight={isSelected ? "bold" : "regular"}
       transition={"color 0.5s"}
-      fontSize={12}
+      fontSize={14}
       onClick={() => navigate(router, path)}
-      color={"secondary"}
+      color={isSelected ? "primary" : "secondary"}
       _hover={{
         color: "primary",
         _after: {

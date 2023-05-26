@@ -5,8 +5,12 @@ import { motion } from "framer-motion";
 import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Item from "../../../data/static/slider/intro.json";
+import navigate from "@/utils/navigate";
+import { useRouter } from "next/router";
 
 export default function SliderLanding() {
+  const router = useRouter();
   return (
     <>
       <Box px={{ base: 4, md: "10%" }} py={"0.8rem"}>
@@ -28,7 +32,13 @@ export default function SliderLanding() {
               Tim kami telah mengumpulkan lebih dari ribuan cerita yang berasal
               dari Nusantara. Tentunya semua itu dapat dibaca secara gratis!
             </Text>
-            <ThemeButton>Mulai Membaca</ThemeButton>
+            <ThemeButton
+              onTap={() => {
+                navigate(router, "/reading");
+              }}
+            >
+              Mulai Membaca
+            </ThemeButton>
           </Flex>
         </Stack>
       </Box>
@@ -50,70 +60,18 @@ export default function SliderLanding() {
           reverseDirection: true,
         }}
       >
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
+        {Item.map((data, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <Image
+                alt=""
+                src={`/assets/img/introItem/${data.image}`}
+                height={"230px"}
+                objectFit={"contain"}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       <Swiper
@@ -133,70 +91,18 @@ export default function SliderLanding() {
           paddingBottom: 20,
         }}
       >
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            alt=""
-            src={`/assets/img/introItem/malin.png`}
-            height={"230px"}
-            objectFit={"contain"}
-          />
-        </SwiperSlide>
+        {Item.map((data, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <Image
+                alt=""
+                src={`/assets/img/introItem/${data.image}`}
+                height={"230px"}
+                objectFit={"contain"}
+              />
+            </SwiperSlide>
+          );
+        }).reverse()}
       </Swiper>
     </>
   );

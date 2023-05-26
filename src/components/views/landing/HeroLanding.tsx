@@ -1,6 +1,8 @@
 import { bottom, left, right, top } from "@/animations/linear";
 import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
+import useGotoSection from "@/hooks/helpers/useGoToSection";
 import { linkRedirection } from "@/utils/linkRedirection";
+import { scrollToSection } from "@/utils/scroll";
 import {
   Box,
   Button,
@@ -17,6 +19,8 @@ import { motion } from "framer-motion";
 import { RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 export default function HeroLanding() {
+  const [explore] = useGotoSection("genre");
+
   return (
     <Box
       height={"100vh"}
@@ -31,7 +35,7 @@ export default function HeroLanding() {
         height={"90vh"}
         justify={"center"}
         spacing={"1.5rem"}
-        fontSize={"12px"}
+        fontSize={"16px"}
       >
         <Text
           as={motion.div}
@@ -122,7 +126,13 @@ export default function HeroLanding() {
             </ListItem>
           </HStack>
         </UnorderedList>
-        <ThemeButton>Mulai Bacaan Pertamamu!</ThemeButton>
+        <ThemeButton
+          onTap={() => {
+            scrollToSection(explore - 50);
+          }}
+        >
+          Mulai Bacaan Pertamamu!
+        </ThemeButton>
         <Box />
         <HStack spacing={"2rem"}>
           <Button

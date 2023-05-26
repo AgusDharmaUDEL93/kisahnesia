@@ -74,7 +74,6 @@ export default function Navbar() {
             <Navitem path="/">Beranda</Navitem>
             <Navitem path="/reading">Mulai Membaca</Navitem>
             <Navitem path="/list">Daftar Cerita</Navitem>
-            <Navitem path="/about">Tentang Kami</Navitem>
           </HStack>
           {isLogin ? (
             <Menu>
@@ -144,10 +143,9 @@ export default function Navbar() {
         <Collapse in={isOpen} animateOpacity>
           <Stack mt={"88px"}>
             <Divider />
-            <NavbaritemMobile path="/about">About</NavbaritemMobile>
-            <NavbaritemMobile path="/product">Product</NavbaritemMobile>
-            <NavbaritemMobile path="/works">Our Works</NavbaritemMobile>
-            <NavbaritemMobile path="/contact">Contact</NavbaritemMobile>
+            <NavbaritemMobile path="/">Beranda</NavbaritemMobile>
+            <NavbaritemMobile path="/reading">Mulai Membaca</NavbaritemMobile>
+            <NavbaritemMobile path="/list">Daftar Cerita</NavbaritemMobile>
           </Stack>
         </Collapse>
       </Box>

@@ -11,6 +11,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import List from "../../../data/static/story/list.json";
 
 export default function PopularReading() {
   return (
@@ -50,10 +51,21 @@ export default function PopularReading() {
           spacing={"2rem"}
           width={"100%"}
         >
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
+          {List.map((data, index) => {
+            return (
+              <CardStory
+                id={index + 1}
+                key={index}
+                image={data.image}
+                title={data.title}
+                region={data.region}
+                time_upload={data.time_upload}
+                views={data.views}
+              />
+            );
+          })
+            .sort((a, b) => (a.props.views > b.props.views ? -1 : 1))
+            .slice(0, 4)}
         </SimpleGrid>
       </Stack>
       <Center height={"12rem"}>

@@ -1,8 +1,34 @@
 import { bottom } from "@/animations/linear";
-import { Box, Heading, Stack, Image, Text } from "@chakra-ui/react";
+import navigate from "@/utils/navigate";
+import {
+  Box,
+  Heading,
+  Stack,
+  Image,
+  Text,
+  AspectRatio,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
-export default function CardStory() {
+type props = {
+  image: string;
+  title: string;
+  region: string;
+  time_upload: number;
+  id: number;
+  views?: number;
+};
+
+export default function CardStory({
+  image,
+  title,
+  region,
+  time_upload,
+  id,
+  views,
+}: props) {
+  const router = useRouter();
   return (
     <Box
       as={motion.div}
@@ -10,7 +36,7 @@ export default function CardStory() {
       initial="init"
       whileInView="animate"
       onClick={() => {
-        console.log("agung tolol");
+        navigate(router, "/story/" + id);
       }}
       transition={"all 0.2s"}
       _hover={{
@@ -21,18 +47,20 @@ export default function CardStory() {
       paddingBottom={"1rem"}
     >
       <Stack maxW={"15rem"} spacing={"1.5rem"}>
-        <Image
-          src={`/assets/img/data/cerita/bawang.png`}
-          alt="bawang"
-          maxW={"18rem"}
-          objectFit={"contain"}
-        />
+        <AspectRatio ratio={4 / 5}>
+          <Image
+            src={image}
+            alt="bawang"
+            maxW={"18rem"}
+            objectFit={"contain"}
+          />
+        </AspectRatio>
         <Stack>
           <Heading fontSize={24} color={"textHeading"}>
-            Bawang Merah dan Bawang Putih
+            {title}
           </Heading>
-          <Text>Yogyakarta</Text>
-          <Text>10 hari yang lalu</Text>
+          <Text>{region}</Text>
+          <Text>{time_upload} hari yang lalu</Text>
         </Stack>
       </Stack>
     </Box>

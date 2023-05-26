@@ -1,15 +1,8 @@
 import { left } from "@/animations/linear";
 import CardStory from "@/components/widgets/cardStory/CardStory";
-import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
-import {
-  Stack,
-  Heading,
-  SimpleGrid,
-  Center,
-  Box,
-  Text,
-} from "@chakra-ui/react";
+import { Stack, Heading, SimpleGrid, Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import List from "../../../data/static/story/list.json";
 
 export default function OtherStory() {
   return (
@@ -31,10 +24,20 @@ export default function OtherStory() {
           spacing={"2rem"}
           width={"100%"}
         >
-          <CardStory />
-          <CardStory />
-          <CardStory />
-          <CardStory />
+          {List.map((data, index) => {
+            return (
+              <CardStory
+                id={index + 1}
+                key={index}
+                image={data.image}
+                title={data.title}
+                region={data.region}
+                time_upload={data.time_upload}
+              />
+            );
+          })
+            .sort((a, b) => Math.random() - 0.5)
+            .slice(0, 4)}
         </SimpleGrid>
       </Stack>
     </Box>

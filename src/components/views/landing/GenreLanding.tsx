@@ -1,5 +1,6 @@
 import { bottom, left, right, top } from "@/animations/linear";
 import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
+import navigate from "@/utils/navigate";
 import {
   Box,
   Center,
@@ -12,14 +13,16 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function GenreLanding() {
+  const router = useRouter();
   return (
-    <Box px={{ base: 4, md: "10%" }}>
+    <Box id="genre" px={{ base: 4, md: "10%" }}>
       <Stack align={"center"} spacing={"1rem"} color={"textBody"} py={"3rem"}>
         <Text
           fontFamily={"Asap"}
-          fontSize={"12px"}
+          fontSize={"16px"}
           as={motion.div}
           variants={left}
           initial="init"
@@ -40,7 +43,7 @@ export default function GenreLanding() {
         </Heading>
         <Text
           fontFamily={"Asap"}
-          fontSize={"12px"}
+          fontSize={"16px"}
           as={motion.div}
           variants={right}
           initial="init"
@@ -76,7 +79,7 @@ export default function GenreLanding() {
             <Heading fontSize={"28px"} fontFamily={"Lato"}>
               Cerita Rakyat
             </Heading>
-            <Text fontSize={"12px"} fontFamily={"Asap"}>
+            <Text fontSize={"16px"} fontFamily={"Asap"}>
               Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
               diyakini oleh suatu kelompok masyarakat.
             </Text>
@@ -100,7 +103,7 @@ export default function GenreLanding() {
             <Heading fontSize={"28px"} fontFamily={"Lato"}>
               Cerita Rakyat
             </Heading>
-            <Text fontSize={"12px"} fontFamily={"Asap"}>
+            <Text fontSize={"16px"} fontFamily={"Asap"}>
               Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
               diyakini oleh suatu kelompok masyarakat.
             </Text>
@@ -124,7 +127,7 @@ export default function GenreLanding() {
             <Heading fontSize={"28px"} fontFamily={"Lato"}>
               Cerita Rakyat
             </Heading>
-            <Text fontSize={"12px"} fontFamily={"Asap"}>
+            <Text fontSize={"16px"} fontFamily={"Asap"}>
               Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
               diyakini oleh suatu kelompok masyarakat.
             </Text>
@@ -132,7 +135,13 @@ export default function GenreLanding() {
         </GridItem>
       </Grid>
       <Center height={"10rem"}>
-        <ThemeButton>Lihat Daftar Cerita</ThemeButton>
+        <ThemeButton
+          onTap={() => {
+            navigate(router, "/list");
+          }}
+        >
+          Lihat Daftar Cerita
+        </ThemeButton>
       </Center>
     </Box>
   );
