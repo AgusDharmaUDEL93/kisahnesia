@@ -76,7 +76,7 @@ assets: contains the assets that will be used on the website
         <td align="center"><a href="https://github.com/agungmahadana"><img src="https://avatars.githubusercontent.com/u/100138244?v=4" width="150px;" alt=""/><br><sub><b>Agung Mahadana</b></sub></td>
     </tr>
     <tr>
-        <td align="center"><a href="https://github.com/madeputrateg"><img src="https://avatars.githubusercontent.com/u/91859807?v=4" width="150px;" alt=""/><br><sub><b>Agus Dharma (GusUdel)</b></sub></td>
+        <td align="center"><a href="https://github.com/madeputrateg"><img src="https://avatars.githubusercontent.com/u/91859807?v=4" width="150px;" alt=""/><br><sub><b>Teguh Pramana</b></sub></td>
     </tr>
     <tr>
         <td align="center"><a href="https://github.com/hoshiirui"><img src="https://avatars.githubusercontent.com/u/120825371?v=4" width="150px;" alt=""/><br><sub><b>Rangga Permana</b></sub></td>
