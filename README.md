@@ -52,7 +52,11 @@ root
 
 ### src: contains the source code of the project
 
-common: contains the common components that are used in the project like components, hooks, animations, utils, etc. <br/>
+animations: contains the animations that will be used on the website <br/>
+components: contains the components that will be used on the website <br/>
+hooks: contains the hooks that will be used on the website <br/>
+layouts: contains the layouts that will be used on the website <br/>
+utils: contains the utils that will be used on the website <br/>
 data: contains the data that will be displayed on the website <br/>
 pages: contains the pages that will be displayed on the website <br/>
 resources: contains the resources that will be displayed on the website <br/>
