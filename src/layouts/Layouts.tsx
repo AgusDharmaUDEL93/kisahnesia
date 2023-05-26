@@ -1,8 +1,6 @@
 import Footer from "@/components/widgets/footer/Footer";
-import dynamic from "next/dynamic";
+import Navbar from "@/components/widgets/navbar/Navbar";
 import Head from "next/head";
-
-const Navbar = dynamic(() => import("../components/widgets/navbar/Navbar"));
 
 type props = {
   title?: string;

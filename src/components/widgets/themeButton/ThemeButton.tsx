@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { MouseEventHandler, ReactNode } from "react";
 
@@ -9,21 +9,23 @@ type props = {
 
 export default function ThemeButton({ children, onTap }: props) {
   return (
-    <Button
-      variant={"unstyled"}
-      bgColor={"primary"}
-      px={"2rem"}
-      height={"2.5rem"}
-      fontFamily={"Lato"}
-      textColor={"white"}
-      borderRadius={"20rem"}
-      _hover={{
-        filter: "brightness(80%)",
-      }}
-      onClick={onTap}
-      fontSize={"12px"}
-    >
-      {children}
-    </Button>
+    <Box>
+      <Button
+        variant={"unstyled"}
+        bgColor={"primary"}
+        px={"2rem"}
+        height={"2.5rem"}
+        fontFamily={"Lato"}
+        textColor={"white"}
+        borderRadius={"20rem"}
+        _hover={{
+          filter: "brightness(80%)",
+        }}
+        onClick={onTap}
+        fontSize={"12px"}
+      >
+        {children}
+      </Button>
+    </Box>
   );
 }

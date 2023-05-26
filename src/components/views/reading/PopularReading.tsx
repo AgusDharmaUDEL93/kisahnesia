@@ -12,8 +12,11 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import List from "../../../data/static/story/list.json";
+import navigate from "@/utils/navigate";
+import { useRouter } from "next/router";
 
 export default function PopularReading() {
+  const router = useRouter();
   return (
     <Box px={{ base: 4, md: "10%" }} paddingTop={"4rem"}>
       <Stack color={"textBody"} spacing={"1.5rem"}>
@@ -69,7 +72,13 @@ export default function PopularReading() {
         </SimpleGrid>
       </Stack>
       <Center height={"12rem"}>
-        <ThemeButton>Lihat Lainnya</ThemeButton>
+        <ThemeButton
+          onTap={() => {
+            navigate(router, "/list");
+          }}
+        >
+          Lihat Lainnya
+        </ThemeButton>
       </Center>
     </Box>
   );

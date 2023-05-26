@@ -11,7 +11,27 @@ export default function ResultSearch() {
     <Box px={{ base: 4, md: "10%" }}>
       <Stack py={"2rem"}>
         <Heading>Hasil pencarian {key}</Heading>
-        <Text>1 hasil ditemukan</Text>
+        <Text>
+          {
+            Story.map((data, index) => {
+              return (
+                <CardStory
+                  id={index + 1}
+                  key={index}
+                  image={data.image}
+                  title={data.title}
+                  region={data.region}
+                  time_upload={data.time_upload}
+                />
+              );
+            }).filter((data) => {
+              return data.props.title
+                .toLowerCase()
+                .includes(key?.toString().toLowerCase());
+            }).length
+          }{" "}
+          hasil ditemukan
+        </Text>
       </Stack>
       <SimpleGrid
         columns={{ base: 1, lg: 2, xl: 4 }}
@@ -29,6 +49,10 @@ export default function ResultSearch() {
               time_upload={data.time_upload}
             />
           );
+        }).filter((data) => {
+          return data.props.title
+            .toLowerCase()
+            .includes(key?.toString().toLowerCase());
         })}
       </SimpleGrid>
     </Box>

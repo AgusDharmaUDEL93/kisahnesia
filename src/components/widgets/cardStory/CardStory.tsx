@@ -18,6 +18,7 @@ type props = {
   time_upload: number;
   id: number;
   views?: number;
+  genre?: string;
 };
 
 export default function CardStory({
@@ -27,6 +28,7 @@ export default function CardStory({
   time_upload,
   id,
   views,
+  genre,
 }: props) {
   const router = useRouter();
   return (

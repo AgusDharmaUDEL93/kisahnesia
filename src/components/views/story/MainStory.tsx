@@ -16,8 +16,11 @@ export default function MainStory() {
   const { id } = router.query;
   return (
     <Box px={{ base: 4, md: "10%" }} py={"5rem"}>
-      <Flex justifyContent={"space-around"}>
-        <Stack align={"center"} spacing={"1rem"}>
+      <Flex
+        // justifyContent={"space-around"}
+        justifyContent={"center"}
+      >
+        {/* <Stack align={"center"} spacing={"1rem"}>
           <Avatar
             src={
               List.find((data) => data.id == Number(id))?.avatar ||
@@ -36,7 +39,7 @@ export default function MainStory() {
               {List.find((data) => data.id == Number(id))?.views}
             </Text>
           </HStack>
-        </Stack>
+        </Stack> */}
         <Stack maxW={"40rem"} spacing={"1.5rem"}>
           <Image
             src={List.find((data) => data.id == Number(id))?.ilustration}
@@ -57,7 +60,7 @@ export default function MainStory() {
             }
           )}
         </Stack>
-        <Box width={"8rem"} />
+        {/* <Box width={"8rem"} /> */}
       </Flex>
     </Box>
   );

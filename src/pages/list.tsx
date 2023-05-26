@@ -1,4 +1,3 @@
-import FilterList from "@/components/views/list/FilterList";
 import HeroList from "@/components/views/list/HeroList";
 import MainList from "@/components/views/list/MainList";
 import Layouts from "@/layouts/Layouts";
@@ -9,7 +8,6 @@ export default function List() {
     <Layouts title="Daftar Cerita | Kisahnesia">
       <Box height={"8rem"} />
       <HeroList />
-      <FilterList />
       <MainList />
     </Layouts>
   );

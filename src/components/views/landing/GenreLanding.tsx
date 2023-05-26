@@ -1,14 +1,12 @@
-import { bottom, left, right, top } from "@/animations/linear";
+import { left, right, top } from "@/animations/linear";
 import ThemeButton from "@/components/widgets/themeButton/ThemeButton";
 import navigate from "@/utils/navigate";
 import {
   Box,
   Center,
-  Flex,
   Grid,
   GridItem,
   Heading,
-  SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";

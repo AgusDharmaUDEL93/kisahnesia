@@ -1,6 +1,5 @@
 import {
   Box,
-  Image,
   Button,
   Flex,
   HStack,
@@ -8,13 +7,6 @@ import {
   Stack,
   Divider,
   useDisclosure,
-  Center,
-  Avatar,
-  Menu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
   Heading,
 } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
@@ -75,7 +67,7 @@ export default function Navbar() {
             <Navitem path="/reading">Mulai Membaca</Navitem>
             <Navitem path="/list">Daftar Cerita</Navitem>
           </HStack>
-          {isLogin ? (
+          {/* {isLogin ? (
             <Menu>
               <MenuButton
                 as={Button}
@@ -122,7 +114,7 @@ export default function Navbar() {
             >
               Masuk
             </Button>
-          )}
+          )} */}
 
           <Button
             display={{ lg: "none" }}

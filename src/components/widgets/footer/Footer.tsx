@@ -26,9 +26,11 @@ import { RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
-      {children}
-    </Text>
+    <Box>
+      <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+        {children}
+      </Text>
+    </Box>
   );
 };
 
@@ -46,13 +48,23 @@ export default function Footer() {
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
-            <ListHeader>Office</ListHeader>
+            <ListHeader>
+              <Heading
+                fontFamily={"Lato"}
+                fontWeight={"bold"}
+                fontSize={"24px"}
+                color={"primary"}
+              >
+                Kisahnesia
+              </Heading>
+            </ListHeader>
             <Text textAlign={"justify"}>
-              Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
-              Stereodiktisk vasyns att preteng. Mons byning fihör. Pore tolig.
-              Epire kanesk. Monosa medelgam tisk.
+              Kisahnesia adalah platform yang mengkurasi cerita rakyat
+              Indonesia. Ini menyediakan koleksi lengkap cerita rakyat dari
+              berbagai daerah di Indonesia. Kisahnesia adalah tempat digital
+              untuk menjaga dan berbagi warisan budaya ini dengan penonton lokal
+              dan global.
             </Text>
-
             <Box height={5} />
             <HStack>
               <Button
@@ -60,9 +72,7 @@ export default function Footer() {
                 variant={"unstyled"}
                 borderRadius={"full"}
                 onClick={() => {
-                  linkRedirection(
-                    "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
-                  );
+                  linkRedirection("https://www.instagram.com/kisahnesia/");
                 }}
               >
                 <RiInstagramFill size={25} color="black" />
@@ -72,9 +82,7 @@ export default function Footer() {
                 variant={"unstyled"}
                 borderRadius={"full"}
                 onClick={() => {
-                  linkRedirection(
-                    "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
-                  );
+                  linkRedirection("https://wa.me/6281339585537");
                 }}
               >
                 <RiWhatsappFill size={25} color="black" />
@@ -85,7 +93,7 @@ export default function Footer() {
                 borderRadius={"full"}
                 onClick={() => {
                   linkRedirection(
-                    "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
+                    "https://www.youtube.com/channel/UC1X5wwKU4z69ec1gCNZP8MA"
                   );
                 }}
               >
@@ -94,7 +102,16 @@ export default function Footer() {
             </HStack>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Menu</ListHeader>
+            <ListHeader>
+              <Heading
+                fontFamily={"Lato"}
+                fontWeight={"bold"}
+                fontSize={"16px"}
+                color={"primary"}
+              >
+                Menu
+              </Heading>
+            </ListHeader>
             <Button
               variant={"unstyled"}
               p={0}
@@ -114,11 +131,12 @@ export default function Footer() {
               height={6}
               _hover={{ textDecoration: "underline" }}
               onClick={() => {
-                navigate(router, "/about");
+                navigate(router, "/reading");
               }}
             >
-              Bagikan Ceritamu!
+              Enjoy our Story
             </Button>
+
             <Button
               variant={"unstyled"}
               p={0}
@@ -126,27 +144,30 @@ export default function Footer() {
               height={6}
               _hover={{ textDecoration: "underline" }}
               onClick={() => {
-                navigate(router, "/announcement");
+                navigate(router, "/list");
               }}
             >
-              Galeri
-            </Button>
-            <Button
-              variant={"unstyled"}
-              p={0}
-              fontWeight={"normal"}
-              height={6}
-              _hover={{ textDecoration: "underline" }}
-              onClick={() => {
-                navigate(router, "/about");
-              }}
-            >
-              Tentang Kami
+              Explore our story
             </Button>
           </Stack>
           <Stack align={"flex-start"}>
-            <ListHeader>Daftar Cerita</ListHeader>
-            <Button
+            <ListHeader>
+              <Heading
+                fontFamily={"Lato"}
+                fontWeight={"bold"}
+                fontSize={"16px"}
+                color={"primary"}
+              >
+                Daftar Cerita
+              </Heading>
+            </ListHeader>
+            <Text>Fabel</Text>
+            <Text>Mitos</Text>
+            <Text>Legenda</Text>
+            <Text>Saga</Text>
+            <Text>Roman</Text>
+            <Text>Cerita Rakyat</Text>
+            {/* <Button
               variant={"unstyled"}
               p={0}
               fontWeight={"normal"}
@@ -193,24 +214,31 @@ export default function Footer() {
               }}
             >
               Saga
-            </Button>
+            </Button> */}
           </Stack>
           <Stack align={"flex-start"} padding={0}>
-            <ListHeader>Follow Us</ListHeader>
+            <ListHeader>
+              <Heading
+                fontFamily={"Lato"}
+                fontWeight={"bold"}
+                fontSize={"16px"}
+                color={"primary"}
+              >
+                Follow Us
+              </Heading>
+            </ListHeader>
             <HStack>
               <Button
                 padding={0}
                 variant={"unstyled"}
                 borderRadius={"full"}
                 onClick={() => {
-                  linkRedirection(
-                    "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
-                  );
+                  linkRedirection("https://wa.me/6281339585537");
                 }}
               >
                 <MdCall size={25} color="black" />
               </Button>
-              <Text>(406) 555-0120</Text>
+              <Text>+62 813-3958-5537</Text>
             </HStack>
             <HStack>
               <Button padding={0} variant={"unstyled"} borderRadius={"full"}>
@@ -219,10 +247,10 @@ export default function Footer() {
               <Text
                 maxWidth={{ base: "13rem", md: "20rem" }}
                 onClick={() => {
-                  linkRedirection("mailto:kisahnesia@gmail.com");
+                  linkRedirection("mailto:kisahnesiaofficial@gmail.com");
                 }}
               >
-                kisahnesia@gmail.com
+                kisahnesiaofficial@gmail.com
               </Text>
             </HStack>
             <HStack>
@@ -231,12 +259,15 @@ export default function Footer() {
                 variant={"unstyled"}
                 borderRadius={"full"}
                 onClick={() => {
-                  navigate(router, "/");
+                  linkRedirection("https://goo.gl/maps/guxSLe9pvd7g2EZF9");
                 }}
               >
                 <MdLocationOn size={25} color="black" />
               </Button>
-              <Text>2972 Westheimer Rd. Santa Ana, Illinois 85486 </Text>
+              <Text>
+                Jl. Raya Kampus Unud, Jimbaran, Kec. Kuta Sel., Kabupaten
+                Badung, Bali 80361
+              </Text>
             </HStack>
           </Stack>
         </SimpleGrid>

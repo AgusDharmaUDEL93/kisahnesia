@@ -140,13 +140,12 @@ export default function HeroLanding() {
             variants={left}
             initial="init"
             whileInView="animate"
+            _hover={{ filter: "brightness(90%)", cursor: "pointer" }}
             padding={0}
             variant={"unstyled"}
             borderRadius={"full"}
             onClick={() => {
-              linkRedirection(
-                "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
-              );
+              linkRedirection("https://instagram.com/kisahnesia");
             }}
           >
             <Box bgColor={"white"} borderRadius={"full"} padding={2}>
@@ -158,13 +157,12 @@ export default function HeroLanding() {
             variants={bottom}
             initial="init"
             whileInView="animate"
+            _hover={{ filter: "brightness(90%)", cursor: "pointer" }}
             padding={0}
             variant={"unstyled"}
             borderRadius={"full"}
             onClick={() => {
-              linkRedirection(
-                "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
-              );
+              linkRedirection("https://wa.me/6281339585537");
             }}
           >
             <Box bgColor={"white"} borderRadius={"full"} padding={2}>
@@ -179,9 +177,10 @@ export default function HeroLanding() {
             padding={0}
             variant={"unstyled"}
             borderRadius={"full"}
+            _hover={{ filter: "brightness(90%)", cursor: "pointer" }}
             onClick={() => {
               linkRedirection(
-                "https://instagram.com/decube_it?igshid=MzRlODBiNWFlZA=="
+                "https://www.youtube.com/channel/UC1X5wwKU4z69ec1gCNZP8MA"
               );
             }}
           >

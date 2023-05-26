@@ -6,7 +6,6 @@ export default function Search() {
   return (
     <Layouts title="Search | Kisahnesia">
       <Box height={"8rem"} />
-
       <ResultSearch />
     </Layouts>
   );
