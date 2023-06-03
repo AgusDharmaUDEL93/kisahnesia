@@ -59,7 +59,7 @@ export default function SliderLanding() {
               slidesPerView: 1,
             },
             992: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
           }}
           style={{
@@ -99,7 +99,7 @@ export default function SliderLanding() {
               slidesPerView: 1,
             },
             992: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
           }}
           slidesPerView={4}

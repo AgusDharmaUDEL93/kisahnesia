@@ -51,7 +51,7 @@ export default function GenreLanding() {
           dari seluruh wilayah Indonesia.
         </Text>
       </Stack>
-      <Stack color={"white"}>
+      <Stack color={"white"} display={{ lg: "none" }}>
         <Stack
           justify={"end"}
           height={"600px"}
