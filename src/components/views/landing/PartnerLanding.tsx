@@ -1,4 +1,5 @@
 import { bottom } from "@/animations/linear";
+import { linkRedirection } from "@/utils/linkRedirection";
 import { Box, Button, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -28,7 +29,13 @@ export default function PartnerLanding() {
               hadiah menarik!
             </Text>
           </Stack>
-          <Button>Bagikan Cerita</Button>
+          <Button
+            onClick={() => {
+              linkRedirection("https://forms.gle/2KmAs8J7eoy1gj1M6");
+            }}
+          >
+            Bagikan Cerita
+          </Button>
         </Flex>
       </Box>
     </Box>

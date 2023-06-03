@@ -1,5 +1,6 @@
 import GenreLanding from "@/components/views/landing/GenreLanding";
 import HeroLanding from "@/components/views/landing/HeroLanding";
+import PartnerLanding from "@/components/views/landing/PartnerLanding";
 import SliderLanding from "@/components/views/landing/SliderLanding";
 import TestimoniLanding from "@/components/views/landing/TestimoniLanding";
 import Loading from "@/components/views/loading/Loading";
@@ -24,6 +25,7 @@ export default function Dashboard() {
           <GenreLanding />
           <SliderLanding />
           <TestimoniLanding />
+          <PartnerLanding />
         </Layouts>
       ) : (
         <Loading />
