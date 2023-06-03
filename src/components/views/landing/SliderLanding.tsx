@@ -54,6 +54,14 @@ export default function SliderLanding() {
           </Stack>
         </Box>
         <Swiper
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 3,
+            },
+          }}
           style={{
             paddingTop: 20,
             paddingBottom: 20,
@@ -86,6 +94,14 @@ export default function SliderLanding() {
         </Swiper>
 
         <Swiper
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 3,
+            },
+          }}
           slidesPerView={4}
           spaceBetween={20}
           pagination={{

@@ -121,7 +121,7 @@ export default function Navbar() {
             variant={"unstyled"}
             onClick={onToggle}
           >
-            <HamburgerIcon boxSize={"25px"} color={"blue.400"} />
+            <HamburgerIcon boxSize={"25px"} color={"black"} />
           </Button>
         </Flex>
       </Box>

@@ -51,7 +51,64 @@ export default function GenreLanding() {
           dari seluruh wilayah Indonesia.
         </Text>
       </Stack>
+      <Stack color={"white"}>
+        <Stack
+          justify={"end"}
+          height={"600px"}
+          borderRadius={20}
+          py={"3rem"}
+          px={"3rem"}
+          bgSize={"cover"}
+          bgPos={"right"}
+          bgImage={`/assets/img/item/cerita.png`}
+        >
+          <Heading fontSize={"28px"} fontFamily={"Lato"}>
+            Cerita Rakyat
+          </Heading>
+          <Text fontSize={"16px"} fontFamily={"Asap"}>
+            Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
+            diyakini oleh suatu kelompok masyarakat.
+          </Text>
+        </Stack>
+        <Stack
+          justify={"end"}
+          borderRadius={20}
+          py={"2rem"}
+          px={"2rem"}
+          height={"600px"}
+          bgSize={"cover"}
+          bgPos={"right"}
+          bgImage={`/assets/img/item/legenda.png`}
+        >
+          <Heading fontSize={"28px"} fontFamily={"Lato"}>
+            Cerita Rakyat
+          </Heading>
+          <Text fontSize={"16px"} fontFamily={"Asap"}>
+            Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
+            diyakini oleh suatu kelompok masyarakat.
+          </Text>
+        </Stack>
+        <Stack
+          justify={"end"}
+          borderRadius={20}
+          py={"2rem"}
+          px={"2rem"}
+          height={"600px"}
+          bgSize={"cover"}
+          bgPos={"right"}
+          bgImage={`/assets/img/item/fabel.png`}
+        >
+          <Heading fontSize={"28px"} fontFamily={"Lato"}>
+            Cerita Rakyat
+          </Heading>
+          <Text fontSize={"16px"} fontFamily={"Asap"}>
+            Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
+            diyakini oleh suatu kelompok masyarakat.
+          </Text>
+        </Stack>
+      </Stack>
       <Grid
+        display={{ base: "none", md: "grid" }}
         height={"500px"}
         gap={4}
         templateRows="repeat(2, 1fr)"

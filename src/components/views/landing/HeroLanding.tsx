@@ -46,7 +46,7 @@ export default function HeroLanding() {
           Halo, selamat datang di....
         </Text>
         <Heading
-          fontSize={"68px"}
+          fontSize={{ base: "40px", lg: "68px" }}
           color={"#2D2D2D"}
           maxW={"750"}
           textAlign={"center"}
@@ -69,7 +69,7 @@ export default function HeroLanding() {
           nusantara. Temukan uniknya keragaman kisah nusantara disini.
         </Text>
         <UnorderedList>
-          <HStack spacing={"3rem"}>
+          <HStack spacing={{ base: "10px", lg: "3rem" }}>
             <ListItem
               fontWeight={"bold"}
               as={motion.div}
