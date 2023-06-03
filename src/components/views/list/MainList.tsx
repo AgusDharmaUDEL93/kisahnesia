@@ -101,9 +101,9 @@ export default function MainList() {
               image={data.image}
               title={data.title}
               region={data.region}
-              time_upload={data.time_upload}
               id={index + 1}
               genre={data.genre}
+              time_upload={data.time_upload}
             />
           );
         })
