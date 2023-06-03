@@ -25,7 +25,11 @@ export default function MainList() {
 
   return (
     <Box px={{ base: 4, md: "10%" }}>
-      <form onSubmit={() => {}}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <InputGroup size={"lg"} variant={"filled"}>
           <InputLeftElement height={"full"}>
             <button type="submit">
@@ -104,6 +108,7 @@ export default function MainList() {
               id={index + 1}
               genre={data.genre}
               time_upload={data.time_upload}
+              views={data.views}
             />
           );
         })
@@ -117,6 +122,15 @@ export default function MainList() {
           })
           .filter((data) => {
             return data.props.genre.includes(type);
+          })
+          .sort((a, b) => {
+            if (order === "Terpopuler") {
+              return b.props.views - a.props.views;
+            } else if (order === "as") {
+              return a.props.title.localeCompare(b.props.title);
+            } else if (order === "ds") {
+              return b.props.title.localeCompare(a.props.title);
+            }
           })}
       </SimpleGrid>
       <Center height={"12rem"}>
