@@ -156,11 +156,11 @@ export default function GenreLanding() {
             bgImage={`/assets/img/item/legenda.png`}
           >
             <Heading fontSize={"28px"} fontFamily={"Lato"}>
-              Cerita Rakyat
+              Legenda
             </Heading>
             <Text fontSize={"16px"} fontFamily={"Asap"}>
-              Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
-              diyakini oleh suatu kelompok masyarakat.
+              Cerita yang mencakup elemen-elemen mitos dan sejarah yang dianggap
+              bermakna penting dalam budaya suatu masyarakat.
             </Text>
           </Stack>
         </GridItem>
@@ -180,11 +180,11 @@ export default function GenreLanding() {
             bgImage={`/assets/img/item/fabel.png`}
           >
             <Heading fontSize={"28px"} fontFamily={"Lato"}>
-              Cerita Rakyat
+              Fabel
             </Heading>
             <Text fontSize={"16px"} fontFamily={"Asap"}>
-              Cerita yang menceritakan asal-usul, legenda, atau kepercayaan yang
-              diyakini oleh suatu kelompok masyarakat.
+              Cerita yang menggunakan hewan untuk menggambarkan nilai-nilai
+              moral dalam kehidupan manusia.
             </Text>
           </Stack>
         </GridItem>
