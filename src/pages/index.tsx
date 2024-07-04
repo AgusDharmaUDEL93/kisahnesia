@@ -26,6 +26,7 @@ export default function Dashboard() {
           <SliderLanding />
           <TestimoniLanding />
           <PartnerLanding />
+          
         </Layouts>
       ) : (
         <Loading />
